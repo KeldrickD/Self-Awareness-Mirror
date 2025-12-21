@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: #0a0a0f;
+  color: #e5e5e5;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12121a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e2e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e3e;
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 30px rgba(0, 212, 170, 0.3);
+}
+
+.glow-warning {
+  box-shadow: 0 0 30px rgba(255, 184, 77, 0.3);
+}
+
+.glow-danger {
+  box-shadow: 0 0 30px rgba(255, 92, 92, 0.3);
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(18, 18, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Scan line effect */
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d4aa, transparent);
+  animation: scan 3s linear infinite;
+  opacity: 0.5;
+}
+
+/* Metric ring animation */
+@keyframes ring-pulse {
+  0%, 100% { stroke-opacity: 1; }
+  50% { stroke-opacity: 0.5; }
+}
+
+.ring-animate {
+  animation: ring-pulse 2s ease-in-out infinite;
+}
+
+/* Video mirror effect */
+.video-mirror {
+  transform: scaleX(-1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00d4aa 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 170, 0.3);
+}
+
+/* Progress bar animation */
+.progress-animate {
+  transition: width 0.5s ease-out;
+}
+
+/* Face detection overlay */
+.face-overlay {
+  position: absolute;
+  border: 2px solid #00d4aa;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 212, 170, 0.5);
+  pointer-events: none;
+}
+
+/* Landmark dots */
+.landmark-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00d4aa;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Status indicator */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.active {
+  background: #00d4aa;
+  box-shadow: 0 0 10px #00d4aa;
+}
+
+.status-dot.inactive {
+  background: #6b7280;
+}
+
